@@ -1,0 +1,36 @@
+@import "../../../node_modules/normalize.scss/normalize";
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  color: #09174B;
+  background: #F2F6FF;
+}
+
+$container-width: 1024px;
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+@import "../../development/components/contact-card/contact-card";
+@import "../../development/components/_contact-card-grid/contact-card-grid";
+
+@import "../../development/components/icon-card/icon-card";
+@import "../../development/components/_icon-card-grid/icon-card-grid";
+
+@import "../../development/components/section/section";
+
+@import "../../development/components/article-card/article-card";
+@import "../../development/components/_article-card-grid/article-card-grid";
+
+@import "../../development/components/button/button";
+@import "../../development/components/stepper/stepper";
+@import "../../development/components/footer/footer";
+@import "../../development/components/thanks/thanks";
+
+
+@import "../../development/components/hero/hero";
+
+@import "../../development/components/bubble-chart/bubble-chart";
+
+@import "../../development/components/navbar/navbar";

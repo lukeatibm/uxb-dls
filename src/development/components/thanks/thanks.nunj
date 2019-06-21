@@ -1,0 +1,36 @@
+<div class="uxb-thanks" id="thanks">
+  <div class="uxb-thanks__container">
+    <div class="uxb-thanks__heading">{{ thanks.heading }}</div>
+    <div class="uxb-thanks__text1">{{ thanks.text1 }}</div>
+    <div class="uxb-thanks__text2">{{ thanks.text2 }}</div>
+  </div>
+  {% set contactCardList = {
+    "attendees": [
+          {
+            "about": "Experience-led, design-driven, visual designer at IBM Studios Dubai. Abdullah has a multidisciplinary background, with work in video production, 2D animation, and visual communication. ",
+            "title": "Visual Designer",
+            "createdAt": "2019-06-11T10:08:46.441Z",
+            "email": "Abdullah.Alomari@ae.ibm.com",
+            "image":  "/components/raw/thanks/abdullah.png",
+            "instagram": "abdewllah",
+            "linkedin": "abdullah-alomari",
+            "name": "Abdullah Alomari",
+            "country": "Dubai",
+            "twitter": ""
+          },{
+            "title": "Frontend Developer",
+            "createdAt": "2019-06-09T11:00:33.472Z",
+            "email": "luke.sansom@ibm.com",
+            "image": "/components/raw/thanks/luke.jpeg",
+            "instagram": "",
+            "linkedin": "lukesansom",
+            "name": "Luke Sansom",
+            "about": "I am a frontend developer at IBM Studios in Dubai. I love tech, travel and a nice flat white!",
+            "country": "Dubai",
+            "twitter": "lukesansom"
+          }
+        ]
+      }
+  %}
+{% include '@contact-card-grid' %}
+</div>

@@ -1,0 +1,31 @@
+.uxb-thanks {
+  background: #0D1B4F;
+  color: #fff;
+  padding: 64px 0;
+
+  &__container {
+    max-width: $container-width;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  &__heading {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 64px;
+    }
+  }
+
+  &__text1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  &__text2 {
+    margin-bottom: 1.5rem;
+  }
+}

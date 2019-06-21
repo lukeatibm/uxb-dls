@@ -1,0 +1,9 @@
+<div class="uxb-icon-card">
+{% if iconCard.icon %}
+<img class="uxb-icon-card__icon" src="{{ iconCard.icon }}" />
+{% endif %}
+<div class="uxb-icon-card__content">
+  <div class="uxb-icon-card__title">{{ iconCard.title }}</div>
+  <div class="uxb-icon-card__description">{{ iconCard.description }}</div>
+</div>
+</div>

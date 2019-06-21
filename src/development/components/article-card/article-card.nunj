@@ -1,0 +1,10 @@
+<div class="uxb-article-card">
+  <div class="uxb-article-card__image" style="background-image: url('{{ articleCard.image }}')"></div>
+  <div class="uxb-article-card__content">
+    <h3 class="uxb-article-card__title">{{ articleCard.title }}</h3>
+    <p class="uxb-article-card__description">{{ articleCard.description }}</p>
+    <div class="uxb-article-card__button">
+    <a href="{{ articleCard.link }}" target="_blank" class="uxb-button uxb-button_secondary">Read More</a>
+    </div>
+  </div>
+</div>

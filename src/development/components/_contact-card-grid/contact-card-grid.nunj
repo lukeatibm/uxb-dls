@@ -1,0 +1,8 @@
+<div class="uxb-contact-card-grid">
+{% for attendee in contactCardList.attendees %}
+  <div class="uxb-contact-card-grid__item">
+  {% set contactCard = attendee %}
+  {% include '@contact-card' %}
+  </div>
+{% endfor %}
+</div>

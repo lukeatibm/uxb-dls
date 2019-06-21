@@ -1,0 +1,108 @@
+{% macro _dot(class, label) %}
+<span class="Status-dot" style="border-class: {{ class }};" title="{{ label }}"></span>
+{% endmacro %}
+
+{% macro _tag(class, label) %}
+<label class="bx--tag {{ class }}">{{ label }}</label>
+{% endmacro %}
+
+{% macro _dots(status) %}
+<div class="Status-dots">
+{% if status.statuses %}
+{% for stat in status.statuses %}
+{{ _dot(stat.class, stat.label) }}
+{% endfor %}
+{% else %}
+{{ _dot(status.class, status.label) }}
+{% endif %}
+</div>
+{% endmacro %}
+
+{% macro _tags(status) %}
+{% if status.statuses %}
+{% for stat in status.statuses %}
+{{ _tag(stat.class, stat.label) }}
+{% endfor %}
+{% else %}
+{{ _tag(status.class, status.label) }}
+{% endif %}
+{% endmacro %}
+
+{% macro labelled(status, modifier) %}
+{% if status %}
+<div class="Status Status--labelled{% if modifier %} Status--{{ modifier }}{% endif %}">
+    <label class="bx--tag {{ class }}">{{ status.label }}</label>
+    {{ _dots(status) }}
+</div>
+{% endif %}
+{% endmacro %}
+
+{% macro unlabelled(status, modifier) %}
+{% if status %}
+<div class="Status Status--unlabelled{% if modifier %} Status--{{ modifier }}{% endif %}">
+{{ _dots(status) }}
+</div>
+{% endif %}
+{% endmacro %}
+
+{% macro tag(status, modifier) %}
+{% if status %}
+<div class="Status Status--tag{% if modifier %} Status--{{ modifier }}{% endif %}">
+{{ _tag(status.class, status.label) }}
+</div>
+{% endif %}
+{% endmacro %}
+{% macro _dot(class, label) %}
+<span class="Status-dot" style="border-class: {{ class }};" title="{{ label }}"></span>
+{% endmacro %}
+
+{% macro _tag(class, label) %}
+<label class="bx--tag {{ class }}">{{ label }}</label>
+{% endmacro %}
+
+{% macro _dots(status) %}
+<div class="Status-dots">
+{% if status.statuses %}
+{% for stat in status.statuses %}
+{{ _dot(stat.class, stat.label) }}
+{% endfor %}
+{% else %}
+{{ _dot(status.class, status.label) }}
+{% endif %}
+</div>
+{% endmacro %}
+
+{% macro _tags(status) %}
+{% if status.statuses %}
+{% for stat in status.statuses %}
+{{ _tag(stat.class, stat.label) }}
+{% endfor %}
+{% else %}
+{{ _tag(status.class, status.label) }}
+{% endif %}
+{% endmacro %}
+
+{% macro labelled(status, modifier) %}
+{% if status %}
+<div class="Status Status--labelled{% if modifier %} Status--{{ modifier }}{% endif %}">
+    <label class="Status-label">{{ status.label }}</label>
+    {{ _dots(status) }}
+</div>
+{% endif %}
+{% endmacro %}
+
+{% macro unlabelled(status, modifier) %}
+{% if status %}
+<div class="Status Status--unlabelled{% if modifier %} Status--{{ modifier }}{% endif %}">
+{{ _dots(status) }}
+</div>
+{% endif %}
+{% endmacro %}
+
+{% macro tag(status, modifier) %}
+{% if status %}
+<div class="Status Status--tag{% if modifier %} Status--{{ modifier }}{% endif %}">
+{{ _tag(status.class, status.label) }}
+</div>
+{% endif %}
+{% endmacro %}

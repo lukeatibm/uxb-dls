@@ -1,0 +1,6 @@
+<div class="uxb-footer">
+  <div class="uxb-footer__container">
+    <div class="uxb-footer__uxb-logo"><img src="/components/raw/footer/uxb-logo-white.svg" alt="uxb logo" /></div>
+    <div class="uxb-footer__ibm">Made with ♥️from IBM Studios Dubai</div>
+  </div>
+</div>

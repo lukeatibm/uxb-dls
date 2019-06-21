@@ -1,0 +1,96 @@
+.uxb-stepper {
+  max-width: $container-width;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 16px;
+  box-sizing: border-box;
+  @media (min-width: $breakpoint-tablet) {
+    padding: 0 86px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__step {
+    display: flex;
+    position: relative;
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin: 0;
+      &:after {
+        content: "";
+        height: 100%;
+        width: 56px;
+        display: block;
+        background: #F2F6FF;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  &__line {
+    width: 2px;
+    background-color: #1637B5;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 23px;
+    @media (min-width: $breakpoint-tablet) {
+      left: 26px;
+      width: 4px;
+    }
+  }
+
+  &__circle {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    background: #FF8651;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 56px;
+      height: 56px;
+      min-width: 56px;
+      min-height: 56px;
+      font-size: 32px;
+    }
+  }
+
+  &__content {
+    margin-left: 16px;
+    @media (min-width: $breakpoint-tablet) {
+    margin-left: 24px;
+
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #09174B;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 24px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    color: #57669D;
+  }
+}

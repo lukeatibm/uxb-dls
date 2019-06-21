@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link media="all" rel="stylesheet" href="{{ '/assets/styles/styles.css' | path }}">
+    <link media="all" rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
+    <title>{{ _target.title}} | {{ _config.project.title }}</title>
+</head>
+
+<body>
+
+  {{ yield | safe }}
+  <script src="	https://unpkg.com/carbon-components/scripts/carbon-components.min.js"></script>
+</body>
+<style>
+  .bx--container {
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+  }
+  .bx--container p {
+    margin-bottom: 1rem;
+  }
+  legend {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .bx--form-item {
+    margin-bottom: 1rem;
+  }
+</style>
+
+<script>
+var form = document.getElementById('attendee-form');
+var apiURL = 'https://a686b21c.eu-gb.apiconnect.appdomain.cloud/uxb-design-systems/attendees';
+var Loading = CarbonComponents.Loading;
+var loadingInstance = Loading.create(document.getElementById('my-loading'));
+var messageContainer = document.getElementById('form-message-container');
+var fullName = document.getElementById('name');
+var about = document.getElementById('about');
+var country = document.getElementById('country');
+var linkedin = document.getElementById('linkedin');
+var twitter = document.getElementById('twitter');
+var instagram = document.getElementById('instagram');
+var email = document.getElementById('email');
+loadingInstance.set(false);
+
+function postData(data = {}) {
+    return fetch(apiURL, {
+        method: 'PUT',
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json());
+}
+
+function showSuccessNotification() {
+  var message = `
+  <div data-notification id="attenedee-success" class="bx--inline-notification bx--inline-notification--success" role="alert">
+  <div class="bx--inline-notification__details">
+      <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--inline-notification__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1c-4.9 0-9 4.1-9 9s4.1 9 9 9 9-4 9-9-4-9-9-9zM8.7 13.5l-3.2-3.2 1-1 2.2 2.2 4.8-4.8 1 1-5.8 5.8z"></path><path d="M8.7 13.5l-3.2-3.2 1-1 2.2 2.2 4.8-4.8 1 1-5.8 5.8z" data-icon-path="inner-path" opacity="0"></path></svg>
+    <div class="bx--inline-notification__text-wrapper">
+      <p class="bx--inline-notification__title">Success</p>
+      <p class="bx--inline-notification__subtitle">Your information has been submitted.</p>
+    </div>
+  </div>
+  <button data-notification-btn class="bx--inline-notification__close-button" type="button" aria-label="close">
+      <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--inline-notification__close-icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"></path></svg>
+  </button>
+</div>
+  `
+  if (messageContainer) {
+    messageContainer.innerHTML = message;
+  }
+}
+
+function showErrorNotification() {
+  var message = `
+<div data-notification class="bx--inline-notification bx--inline-notification--error" role="alert">
+  <div class="bx--inline-notification__details">
+      <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--inline-notification__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm3.5 13.5l-8-8 1-1 8 8-1 1z"></path><path d="M13.5 14.5l-8-8 1-1 8 8-1 1z" data-icon-path="inner-path" opacity="0"></path></svg>
+    <div class="bx--inline-notification__text-wrapper">
+      <p class="bx--inline-notification__title">Error</p>
+      <p class="bx--inline-notification__subtitle">Your information could not be submitted, please try again.</p>
+    </div>
+  </div>
+  <button data-notification-btn class="bx--inline-notification__close-button" type="button" aria-label="close">
+      <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--inline-notification__close-icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"></path></svg>
+  </button>
+</div>
+  `
+  if (messageContainer) {
+    messageContainer.innerHTML = message;
+  }
+}
+
+function clearForm() {
+  fullName.value = "";
+  about.value = "";
+  title.value = "";
+  country.value = "";
+  linkedin.value = "";
+  twitter.value = "";
+  instagram.value = "";
+  email.value = "";
+}
+
+function submitForm(event) {
+  event.preventDefault();
+  loadingInstance.set(true);
+
+
+  var data = { name: fullName.value, title: title.value, about: about.value, country: country.value, linkedin: linkedin.value, twitter: twitter.value, instagram: instagram.value, email: email.value }
+  
+  postData(data)
+  .then(data => {
+    loadingInstance.set(false);
+    showSuccessNotification();
+    clearForm();
+    }).catch(error => {
+    loadingInstance.set(false);
+    showErrorNotification(); 
+  });
+
+
+}
+form.addEventListener('submit', submitForm);
+
+</script>
+
+
+
+</html>

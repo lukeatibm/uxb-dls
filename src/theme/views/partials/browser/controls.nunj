@@ -1,0 +1,26 @@
+{% import "macros/image.nunj" as img %}
+
+
+<nav data-tabs class="bx--tabs" role="navigation">
+  <div class="bx--tabs-trigger" tabindex="0">
+    <a href="javascript:void(0)" class="bx--tabs-trigger-text" tabindex="-1"></a>
+      <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M5 6L0 1 .7.3 5 4.6 9.3.3l.7.7z"></path></svg>
+  </div>
+    <ul class="bx--tabs__nav bx--tabs__nav--hidden" role="tablist">
+        {% for panel in frctl.theme.get('panels') %}
+        {% if panel == 'resources' %}
+        {% for collection in entity.resources().items() %}
+        {% if collection.size %}
+        <li class="Browser-tab--resources{% if not collection.size %} is-disabled{% endif %} bx--tabs__nav-item" data-role="tab">
+            <a class="bx--tabs__nav-link" href="#browser-{{ entity.id }}-panel-{{ collection.name }}">{{ collection.label }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        <li class=" Browser-tab--{{ panel }}{% if loop.first %}  is-active  {% endif %} bx--tabs__nav-item" data-role="tab">
+            <a class="bx--tabs__nav-link" href="#browser-{{ entity.id }}-panel-{{ panel }}">{% if panel == 'html' %}HTML{% else %}{{ panel | capitalize }}{% endif %}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</nav>

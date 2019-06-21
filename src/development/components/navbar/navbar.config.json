@@ -1,0 +1,17 @@
+{
+  "name": "Navbar",
+  "status": "wip",
+  "context": {
+    "navbar": {
+      "links": [
+        { "link": "#what", "text": "What is a DLS?" },
+        { "link": "#why", "text": "Why a DLS?" },
+        { "link": "#how", "text": "How to DLS" },
+        { "link": "#reading", "text": "Reading Material" },
+        { "link": "#collections", "text": "Collections" },
+        { "link": "#attendees", "text": "Attendees" },
+        { "link": "#thanks", "text": "Thank you" }
+      ]
+    }
+  }
+}

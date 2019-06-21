@@ -1,0 +1,57 @@
+.uxb-article-card {
+  background: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &__content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 0 1rem 0;
+  }
+
+  &__description {
+    margin: 0 0 1rem 0;
+    font-size: 16px;
+    color: #57669D;
+    flex-grow: 1;
+  }
+
+
+  &__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    position: relative;
+
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 28.15%;
+    }
+  }
+
+  &__button {
+
+  }
+
+
+  .uxb-button {
+    width: 100%;
+    @media (min-width: $breakpoint-tablet) {
+      width: auto;
+    }
+  }
+
+}

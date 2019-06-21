@@ -1,0 +1,40 @@
+{
+  "name": "Article Card Grid",
+  "status": "wip",
+  "context": {
+    "articleCardGrid": {
+      "articles": [
+        {
+          "image": "/components/raw/article-card/invision.png",
+          "title": "Build your design system like the pros",
+          "description": "A video series by InVision, on how to make great design systems.",
+          "link": "https://www.invisionapp.com/design-system-manager/expert-advice"
+        },
+        {
+          "image": "/components/raw/article-card/medium.png",
+          "title": "Design Systems Sprint 0: The Silver Bullet of Product Development",
+          "description": "In this series of posts, I’m reporting on UXPin’s journey of creating our own design system.",
+          "link": "https://medium.com/@marcintreder/design-systems-sprint-0-the-silver-bullet-of-product-development-8c0ed83bf00d"
+        },
+        {
+          "image": "/components/raw/article-card/youtube.png",
+          "title": "Design Systems - The State of the Web",
+          "description": "Chat with Adam Argyle (Design Advocate at Google) about the role of design systems and how they can change the dynamics...",
+          "link": "https://www.youtube.com/watch?v=jpmeWXISU5E"
+        },
+        {
+          "image": "/components/raw/article-card/medium.png",
+          "title": "Design Doesn't Scale",
+          "description": "An article by Stanley Wood, a designer at Spotify, on how they unified their products using a design system.",
+          "link": "https://medium.com/@hellostanley/design-doesnt-scale-4d81e12cbc3e"
+        },
+        {
+          "image": "/components/raw/article-card/medium.png",
+          "title": "Building Design Systems at Scale",
+          "description": "An article by Tanner Christensen, a designer at Facebook, on his guidance on how to build a design system.",
+          "link": "https://medium.muz.li/building-design-systems-at-scale-86cfcd55127b"
+        }
+      ]
+    }
+  }
+}

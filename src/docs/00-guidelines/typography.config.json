@@ -1,0 +1,74 @@
+{
+  "context": {
+    "typography": {
+      "Type Styles:": {
+        "Alpha": {
+          "name": "Hero",
+          "size": "64",
+          "weight": "Bold",
+          "type": "large"
+        },
+        "Beta": {
+          "name": "Heading 1",
+          "size": "48",
+          "weight": "Bold",
+          "type": "h1"
+        },
+        "Charlie": {
+          "name": "Heading 2",
+          "size": "40",
+          "weight": "Bold",
+          "type": "h2"
+        },
+        "Delta": {
+          "name": "Heading 3",
+          "size": "32",
+          "weight": "Bold",
+          "type": "h3"
+        },
+        "Echo": {
+          "name": "Heading 4",
+          "size": "24",
+          "weight": "Bold",
+          "type": "h4"
+        },
+        "Foxtrot": {
+          "name": "Heading 5",
+          "size": "20",
+          "weight": "Bold",
+          "type": "h5"
+        },
+        "Golf": {
+          "name": "Heading 6",
+          "size": "18",
+          "weight": "Bold",
+          "type": "h6"
+        },
+        "India": {
+          "name": "Body Regular",
+          "size": "16",
+          "weight": "Regular",
+          "type": "p"
+        },
+        "Juliet": {
+          "name": "Body Bold",
+          "size": "16",
+          "weight": "Bold",
+          "type": "p"
+        },
+        "Kilo": {
+          "name": "Caption",
+          "size": "14",
+          "weight": "Regular",
+          "type": "div"
+        },
+        "Lima": {
+          "name": "Small",
+          "size": "12",
+          "weight": "Regular",
+          "type": "small"
+        }
+      }
+    }
+  }
+}

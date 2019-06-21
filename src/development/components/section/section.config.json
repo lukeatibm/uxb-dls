@@ -1,0 +1,10 @@
+{
+  "name": "Section",
+  "status": "wip",
+  "context": {
+    "section": {
+      "heading": "What is a DLS?",
+      "description": "Remember that a DLS isn’t just one thing, it’s all of these things and more. It does however have a few core components, that must be there as basic building blocks for any product you design."
+    }
+  }
+}

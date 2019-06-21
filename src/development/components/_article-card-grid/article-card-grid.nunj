@@ -1,0 +1,8 @@
+<div class="uxb-article-card-grid">
+{% for article in articleCardGrid.articles %}
+  <div class="uxb-article-card-grid__item">
+  {% set articleCard = article %}
+  {% include '@article-card' %}
+  </div>
+{% endfor %}
+</div>

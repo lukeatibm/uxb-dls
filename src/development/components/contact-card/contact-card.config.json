@@ -1,0 +1,17 @@
+{
+  "name": "Contact Card",
+  "status": "wip",
+  "context": {
+    "contactCard": {
+      "name": "Attendee Name",
+      "country": "Dubai",
+      "title": "UX Designer",
+      "about": "This is a short description of what I do or what I enjoy doing. Think of it like a “bio” section on LinkedIn or Twitter for example. It can span multiple lines. It should look when it’s short and what it’s long.This is a short description of what I do or what I enjoy doing. ",
+      "email": "name@email.com",
+      "linkedin": "linkedinusername",
+      "instagram": "instagramusername",
+      "twitter": "twitterusername",
+      "image": "/components/raw/contact-card/profile.svg"
+    }
+  }
+}

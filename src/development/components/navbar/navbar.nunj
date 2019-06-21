@@ -1,0 +1,11 @@
+<div class="uxb-navbar js-navbar">
+<div class="uxb-navbar__wrapper">
+<nav class="uxb-navbar__container">
+  <ul class="uxb-navbar__links">
+  {% for link in navbar.links %}
+    <li class="uxb-navbar__link"><a href="{{ link.link }}">{{ link.text }}</a></li>
+  {% endfor %}
+  </ul>
+</nav>
+</div>
+</div>

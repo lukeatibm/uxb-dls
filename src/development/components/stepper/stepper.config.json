@@ -1,0 +1,30 @@
+{
+  "name": "Stepper",
+  "status": "wip",
+  "context": {
+    "stepper": {
+      "steps": [
+        {
+          "title": "Start with the core",
+          "description": "The core of any DLS, is made up of colors, typography, and a basic pattern library. Start by defining those first, as they are the most fundamental building blocks of any product."
+        },
+        {
+          "title": "Define rules and guidance",
+          "description": "Start by doing this to the core, when do we use certain colors? When do we use different text styles? Why have they been designed in this way?"
+        },
+        {
+          "title": "Use the DLS",
+          "description": "You already have the foundation, so you should start using it immediately. Use the text styles, use the colors, components."
+        },
+        {
+          "title": "Build upon it and maintain it",
+          "description": "As your needs and requirements grow, you can start adding bits and pieces to the DLS. Whether that's new reusable components to your pattern library, or additional guidance on copy writing and tone of voice, or more clarifications on certain parts. As we mentioned, it's a living document that's never \"done\", and grows with your projects."
+        },
+        {
+          "title": "Review it every once in a while",
+          "description": "When things get really hectic we sometimes move too quickly and tend to add things without proper consideration. It's a good idea to take a step back from time to time and have a critique of your DLS. Do we have repetative elements? Is everything explained clearly? Are we really using this color anywhere?When things get really hectic we sometimes move too quickly and tend to add things without proper consideration. It's a good idea to take a step back from time to time and have a critique of your DLS. Do we have repetative elements? Is everything explained clearly? Are we really using this color anywhere?"
+        }
+      ]
+    }
+  }
+}

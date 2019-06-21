@@ -1,0 +1,33 @@
+.uxb-button {
+  height: 48px;
+  line-height: 48px;
+  position: relative;
+  display: inline-block;
+  padding: 0 24px;
+  background: #3278FF;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: 500;
+  box-sizing: border-box;
+  border: 0;
+
+  &:focus {
+    outline: 0;
+  }
+
+
+
+  &:hover {
+    background: lighten(#3278FF, 5%);
+  }
+
+  &_primary {
+    background: #FF8651;
+
+    &:hover {
+      background: lighten(#FF8651, 5%);
+    }
+  }
+}

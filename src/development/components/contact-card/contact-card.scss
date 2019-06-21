@@ -1,0 +1,251 @@
+.uxb-contact-card {
+  height: 284px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  @media (min-width: $breakpoint-tablet) {
+    height: 444px;
+  }
+
+  &_open {
+    .uxb-contact-card__underlay {
+      opacity: 1;
+    }
+
+    .uxb-contact-card__image-container {
+      width: 250px;
+      min-width: 250px;
+      position: relative;
+      max-height: 284px;
+      @media (min-width: $breakpoint-tablet) {
+        max-height: 444px;
+      }
+    }
+  }
+
+  &_show-wrapper {
+    .uxb-contact-card__wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 100;
+    }
+    .uxb-contact-card__container {
+      width: 100%;
+      height: 100%;
+      @media (min-width: $breakpoint-tablet) {
+        height: 444px;
+        width: 680px;
+      }
+    }
+    .uxb-contact-card__image-container {
+      width: 100%;
+      @media (min-width: $breakpoint-tablet) {
+        width: 250px;
+      }
+    }
+    .uxb-contact-card__ghost {
+      background: rgba(13,27,79,1);
+    }
+  }
+  
+
+  &_open-bio {
+    .uxb-contact-card__detail-container {
+      background: #fff;
+      visibility: visible;
+      width: 100%;
+      @media (min-width: $breakpoint-tablet) {
+        width: 430px;
+      }
+
+    }
+  }
+
+  &_show-bio {
+    .uxb-contact-card__detail-content {
+      opacity: 1;
+    }
+  }
+
+  &__underlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.3s opacity ease;
+    background: rgba(13,27,79,0.90);
+    // background: rgba(0,0,0,0.85);
+  }
+
+  &__ghost {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+  }
+
+  &__container {
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+    top: auto;
+    left: auto;
+    height: 284px;
+    flex-wrap: wrap;
+
+    @media (min-width: $breakpoint-tablet) {
+      height: 444px;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__image-container {
+          transition-duration: 0.3s;
+      transition-property: width;
+  }
+
+
+  &__detail-container {
+    width: 0;
+    background: #fff;
+    visibility: hidden;
+    color: #09174B;
+    @media (min-width: $breakpoint-tablet) {
+      transition-duration: 0.3s;
+      transition-property: width;
+    }
+  }
+
+  &__detail-content {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    flex-grow: 1;
+    height: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+  
+  }
+  &__detail-body {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__detail-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
+
+  &__overlay {
+    background: linear-gradient(180deg, rgba(13,27,79,0) 0%, rgba(13,27,79,0.8) 100%);
+    position: absolute;
+    left:0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left:0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 1rem;
+  }
+
+  &__name {
+    font-size: 18px;	
+    font-weight: bold;	
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+  }
+
+  &__title {
+    font-size: 16px;	
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+  }
+
+  &__bio-heading {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+  }
+  &__bio {
+    margin: 0.5rem 0 1rem 0;
+  } 
+
+  &__location {
+    font-size: 14px;	
+    line-height: 1;
+    text-transform: capitalize;
+
+    &-icon {
+      margin-right: 0.25rem;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  .uxb-contact-card__social {
+    display: flex;
+    flex-direction: column;
+    color: #1637B5;
+
+    a {
+      color: #1637B5;
+      text-decoration: none;
+      &:visited {
+      color: #1637B5;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+    &-link {
+      display: flex;
+      margin-bottom: 0.5rem;
+    }
+
+    &-icon {
+      margin-right: 0.5rem;
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+
+}

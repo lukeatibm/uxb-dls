@@ -1,0 +1,4 @@
+<div class="uxb-section">
+<h2 class="uxb-section__heading">{{ section.heading }}</h2>
+<p class="uxb-section__description">{{ section.description }}</p>
+</div>

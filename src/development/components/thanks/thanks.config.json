@@ -1,0 +1,11 @@
+{
+  "name": "Thanks",
+  "status": "wip",
+  "context": {
+    "thanks": {
+      "heading": "Thank you!",
+      "text1": "It was great seeing you all and we hope you’ve enjoyed our session.",
+      "text2": "If you have more questions or wanna reach out for anything you can find us here 😊"
+    }
+  }
+}

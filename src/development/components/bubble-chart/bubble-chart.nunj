@@ -1,0 +1,3 @@
+<div class="uxb-bubble-chart">
+  <div class="uxb-bubble-chart__container js-bubble-chart" data-bubbles="{{ bubbleChart.bubbles | stringify }}"></div>
+</div>

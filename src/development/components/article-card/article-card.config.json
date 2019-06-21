@@ -1,0 +1,12 @@
+{
+  "name": "Article Card",
+  "status": "wip",
+  "context": {
+    "articleCard": {
+      "image": "/components/raw/article-card/article.svg",
+      "title": "Design Systems Sprint 0: The Silver Bullet of Product Development",
+      "description": "Chat with Adam Argyle (Design Advocate at Google) about the role of design systems in modern web development and how they can.",
+      "link": "https://google.com"
+    }
+  }
+}

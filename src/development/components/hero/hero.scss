@@ -1,0 +1,88 @@
+.uxb-hero {
+  height: calc(100vh - 170px);
+  min-height: 680px;
+  position: relative;
+  color: #fff;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__overlay {
+    background: linear-gradient(180deg, rgba(13,27,79,0.24) 0%, #0D1B4F 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__content {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 1rem 1rem 2rem 1rem;
+  }
+
+  &__content-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  &__title {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__heading {
+    margin: 0 0 1rem 0;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 32px;
+    }
+  }
+
+  &__date {
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__details {
+    @media (min-width: $breakpoint-desktop) {
+      display: flex;
+    }
+  }
+
+  &__description {
+    font-size: 1rem;
+    flex: 1;
+    padding-right: 1rem;
+    p {
+      margin-bottom: 1rem;
+      @media (min-width: $breakpoint-desktop) {
+        margin: 0;
+      }
+    }
+
+  }
+
+  &__cta {
+  }
+
+
+}

@@ -1,0 +1,45 @@
+{
+  "name": "uxb-dls",
+  "version": "1.0.0",
+  "description": "A sample DLS for UXB2019 design language workshop.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/gulp develop",
+    "build": "node_modules/.bin/gulp build",
+    "release:URL": "npm run build && cd ./dist/ && ibmcloud app push uxb-dls"
+  },
+  "keywords": [
+    "DLS"
+  ],
+  "author": "luke.sansom@ibm.com",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@frctl/mandelbrot": "^1.2.1",
+    "@frctl/nunjucks": "^2.0.1",
+    "body-scroll-lock": "^2.6.1",
+    "carbon-components": "^10.2.0",
+    "d3": "4.0",
+    "nav-scroll-spy": "^1.0.2",
+    "normalize.scss": "^0.1.0",
+    "request-promise-native": "^1.0.7",
+    "smooth-scroll": "^16.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
+    "del": "^4.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "path": "^0.12.7",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}

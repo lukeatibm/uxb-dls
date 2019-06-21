@@ -1,0 +1,25 @@
+{
+  "name": "Icon Card Grid",
+  "status": "wip",
+  "context": {
+    "iconCardGrid": {
+      "cards": [
+        {
+          "icon": "/components/raw/icon-card/flag.svg",
+          "title": "Consistency",
+          "description": "With clear guidelines and alignment between all team members, your product will feel whole, not broken into smaller pieces."
+        },
+        {
+          "icon": "/components/raw/icon-card/clock.svg",
+          "title": "Speed",
+          "description": "Reusable assets allow you to solve a user need once and reuse it anywhere quickly. You can also pick and match to create designs faster."
+        },
+        {
+          "icon": "/components/raw/icon-card/scale.svg",
+          "title": "Scale",
+          "description": "By having reusable and flexible assets, you can accomodate for different channels and platforms, and combine them for creative solutions."
+        }
+      ]
+    }
+  }
+}

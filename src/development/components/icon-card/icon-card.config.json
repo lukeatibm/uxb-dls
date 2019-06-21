@@ -1,0 +1,11 @@
+{
+  "name": "Icon Card",
+  "status": "wip",
+  "context": {
+    "iconCard": {
+      "icon": "/components/raw/icon-card/clock.svg",
+      "title": "Title",
+      "description": "With clear guidelines and alignment between all team members, your product will feel whole, not broken into smaller pieces."
+    }
+  }
+}

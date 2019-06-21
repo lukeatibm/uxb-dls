@@ -1,0 +1,147 @@
+<div class="uxb-contact-card js-contact-card">
+    <div class="uxb-contact-card__ghost"></div>
+    <div class="uxb-contact-card__wrapper">
+        <div class="uxb-contact-card__underlay js-card-underlay"></div>
+
+
+        <div class="uxb-contact-card__container js-card-container">
+            <div class="uxb-contact-card__image-container">
+                {% if contactCard.image %}
+                <div class="uxb-contact-card__image" style="background-image:url({{ contactCard.image }})"></div>
+                {% else %}
+                <div class="uxb-contact-card__image" style="background-image:url(/components/raw/contact-card/profile.svg)"></div>
+                {% endif %}
+                <div class="uxb-contact-card__overlay"></div>
+
+                <div class="uxb-contact-card__content">
+                    <div class="uxb-contact-card__name">{{ contactCard.name }}</div>
+                    {% if contactCard.title %}
+                    <div class="uxb-contact-card__title">{{ contactCard.title }}</div>
+                    {% endif %}
+                    {% if contactCard.country %}
+                    <div class="uxb-contact-card__location">
+                        <span class="uxb-contact-card__location-icon">
+                        <svg width="10px" height="12px" viewBox="0 0 10 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Profile-Card/Desktop/Default" transform="translate(-19.000000, -413.000000)" fill="#FFFFFF">
+                                    <g id="Icon/System/Location" transform="translate(16.000000, 411.000000)">
+                                        <path d="M11.181976,3.22851181 L11.181976,3.22851181 C9.4247469,1.59049606 6.57550067,1.59049606 4.818024,3.22851181 L4.818024,3.22851181 C3.23458678,4.70452601 3.05633869,7.48370657 4.40013125,9.15379956 L8,14 L11.5998688,9.15379956 C12.9436613,7.48370657 12.7654132,4.70452601 11.181976,3.22851181 Z M8,8.5 C6.89533333,8.5 6,7.60466667 6,6.5 C6,5.39533333 6.89533333,4.5 8,4.5 C9.10466667,4.5 10,5.39533333 10,6.5 C10,7.60466667 9.10466667,8.5 8,8.5 Z" id="Fill"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        </span>
+                        {{ contactCard.country }}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="uxb-contact-card__detail-container">
+                <div class="uxb-contact-card__detail-content">
+                    <div class="uxb-contact-card__detail-body">
+                    {% if contactCard.about %}
+                    <h4 class="uxb-contact-card__bio-heading">Bio</h4>
+                    <p class="uxb-contact-card__bio">{{ contactCard.about }}</p>
+                    {% endif %}
+                    <div class="uxb-contact-card__social">
+                        {% if contactCard.twitter %}
+                        <div class="uxb-contact-card__social-link">
+                        <span class="uxb-contact-card__social-icon">
+                            <svg width="24px" height="20px" viewBox="0 0 24 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Profile-Card/Desktop/Expanded" transform="translate(-270.000000, -206.000000)" fill="#1637B5">
+                                        <g id="Shadow">
+                                            <g id="Social-Media-Handles" transform="translate(266.000000, 200.000000)">
+                                                <g id="Twitter">
+                                                    <g id="Icon/Social/Twitter">
+                                                        <path d="M27.8659476,8.43 C27.7129476,8.265 27.4679476,8.223 27.2679476,8.328 C27.1249476,8.403 26.8469476,8.501 26.5209476,8.597 C26.9119476,8.084 27.2289476,7.501 27.3649476,6.979 C27.4189476,6.776 27.3379476,6.561 27.1659476,6.441 C26.9909476,6.322 26.7619476,6.324 26.5919476,6.445 C26.2979476,6.654 24.9389476,7.256 24.0619476,7.451 C22.9489476,6.45 21.8409476,6 20.5009476,6 C19.4959476,6 18.5649476,6.287 17.4829476,6.929 C15.5959476,8.049 15.2689476,10.47 15.4089476,11.955 C10.2869476,11.467 7.41394756,8.487 6.39294756,7.19 C6.29094756,7.061 6.12894756,6.999 5.96494756,7.001 C5.79994756,7.013 5.65094756,7.105 5.56794756,7.248 C4.34694756,9.341 4.84694756,11.495 5.78494756,12.944 C5.63094756,12.839 5.47494756,12.722 5.31894756,12.593 C5.16894756,12.47 4.96194756,12.442 4.78694756,12.526 C4.61194756,12.608 4.49994756,12.784 4.49994756,12.978 C4.49994756,15.175 5.78694756,16.745 7.04294756,17.637 C6.91994756,17.604 6.78794756,17.566 6.64894756,17.522 C6.46094756,17.465 6.25694756,17.52 6.12694756,17.667 C5.99594756,17.814 5.96294756,18.024 6.04294756,18.203 C6.84594756,20.008 8.44294756,21.354 10.2329476,21.822 C8.69394756,22.759 6.56594756,23.24 4.55794756,23.003 C4.32394756,22.972 4.09894756,23.118 4.02494756,23.344 C3.95094756,23.569 4.04594756,23.816 4.25194756,23.934 C6.68594756,25.324 9.21494756,26 11.9829476,26 L12.0009476,26 C15.7819476,25.997 19.3329476,24.352 21.9989476,21.368 C24.5719476,18.489 25.9209476,14.802 25.6449476,11.445 C26.3059476,10.951 27.3069476,10.027 27.9239476,9.035 C28.0439476,8.843 28.0199476,8.595 27.8659476,8.43 L27.8659476,8.43 Z" id="Fill"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </span>
+                        <a href="https://www.twitter.com/{{ contactCard.twitter  }}" target="_blank">@{{ contactCard.twitter }}</a></div>
+                        {% endif %}
+
+                        {% if contactCard.instagram %}
+                        <div class="uxb-contact-card__social-link">
+                        <span class="uxb-contact-card__social-icon">
+
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Profile-Card/Desktop/Expanded" transform="translate(-270.000000, -236.000000)" fill="#1637B5">
+                                    <g id="Shadow">
+                                        <g id="Social-Media-Handles" transform="translate(266.000000, 200.000000)">
+                                            <g id="Instagram" transform="translate(0.000000, 32.000000)">
+                                                <g id="Icon/Social/Instagram">
+                                                    <path d="M10.5214545,6.18181818 C8.12909091,6.18181818 6.18181818,8.12909091 6.18181818,10.5214545 L6.18181818,21.4785455 C6.18181818,23.8709091 8.12909091,25.8181818 10.5214545,25.8181818 L21.4785455,25.8181818 C23.8709091,25.8181818 25.8181818,23.8709091 25.8181818,21.4785455 L25.8181818,10.5214545 C25.8181818,8.12909091 23.8709091,6.18181818 21.4785455,6.18181818 L10.5214545,6.18181818 Z M21.4785455,28 L10.5214545,28 C6.92581818,28 4,25.0741818 4,21.4785455 L4,10.5214545 C4,6.92581818 6.92581818,4 10.5214545,4 L21.4785455,4 C25.0741818,4 28,6.92581818 28,10.5214545 L28,21.4785455 C28,25.0741818 25.0741818,28 21.4785455,28 Z M16,11.6363636 C13.5934545,11.6363636 11.6363636,13.5934545 11.6363636,16 C11.6363636,18.4065455 13.5934545,20.3636364 16,20.3636364 C18.4065455,20.3636364 20.3636364,18.4065455 20.3636364,16 C20.3636364,13.5934545 18.4065455,11.6363636 16,11.6363636 Z M16,22.5454545 C12.3901818,22.5454545 9.45454545,19.6098182 9.45454545,16 C9.45454545,12.3901818 12.3901818,9.45454545 16,9.45454545 C19.6098182,9.45454545 22.5454545,12.3901818 22.5454545,16 C22.5454545,19.6098182 19.6098182,22.5454545 16,22.5454545 Z M22.5454545,9.45454545 C21.9443636,9.45454545 21.4545455,8.96472727 21.4545455,8.36363636 C21.4545455,7.76254545 21.9443636,7.27272727 22.5454545,7.27272727 C23.1465455,7.27272727 23.6363636,7.76254545 23.6363636,8.36363636 C23.6363636,8.96472727 23.1465455,9.45454545 22.5454545,9.45454545 Z" id="Fill"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        </span>
+                        <a href="https://www.instagram.com/{{ contactCard.instagram  }}" target="_blank">@{{ contactCard.instagram }}</a></div>
+                        {% endif %}
+
+                        {% if contactCard.linkedin %}
+                        <div class="uxb-contact-card__social-link">
+                        <span class="uxb-contact-card__social-icon">
+
+                            <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Profile-Card/Desktop/Expanded" transform="translate(-271.000000, -269.000000)" fill="#1637B5">
+                                        <g id="Shadow">
+                                            <g id="Social-Media-Handles" transform="translate(266.000000, 200.000000)">
+                                                <g id="LinkedIn" transform="translate(0.000000, 64.000000)">
+                                                    <g id="Icon/Social/LinkedIn">
+                                                        <path d="M24,23.5 C24,23.776 23.776,24 23.5,24 L20.5,24 C20.224,24 20,23.776 20,23.5 L20,18 C20,16.748 19.439,16 18.5,16 C17.561,16 17,16.748 17,18 L17,23.5 C17,23.776 16.776,24 16.5,24 L13.5,24 C13.224,24 13,23.776 13,23.5 L13,13.5 C13,13.224 13.224,13 13.5,13 L16.5,13 C16.776,13 17,13.224 17,13.5 L17,13.814 C17.65,13.306 18.416,13 19.5,13 C22.233,13 24,14.962 24,18 L24,23.5 Z M10,12 C8.897,12 8,11.103 8,10 C8,8.897 8.897,8 10,8 C11.103,8 12,8.897 12,10 C12,11.103 11.103,12 10,12 L10,12 Z M12,23.5 C12,23.776 11.776,24 11.5,24 L8.5,24 C8.224,24 8,23.776 8,23.5 L8,13.5 C8,13.224 8.224,13 8.5,13 L11.5,13 C11.776,13 12,13.224 12,13.5 L12,23.5 Z M25,5 L7,5 C5.897,5 5,5.897 5,7 L5,25 C5,26.103 5.897,27 7,27 L25,27 C26.103,27 27,26.103 27,25 L27,7 C27,5.897 26.103,5 25,5 L25,5 Z" id="Fill"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </span>
+                        <a href="https://www.linkedin.com/in/{{ contactCard.linkedin  }}" target="_blank">@{{ contactCard.linkedin }}</a></div>
+                        {% endif %}
+
+                        {% if contactCard.email %}
+                        <div class="uxb-contact-card__social-link">
+                        <span class="uxb-contact-card__social-icon">
+
+                            <svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Profile-Card/Desktop/Expanded" transform="translate(-270.000000, -303.000000)" fill="#1637B5">
+                                        <g id="Shadow">
+                                            <g id="Social-Media-Handles" transform="translate(266.000000, 200.000000)">
+                                                <g id="Email" transform="translate(0.000000, 96.000000)">
+                                                    <g id="Icon/Social/Email">
+                                                        <path d="M25.1514693,7 L6.84859349,7 C5.27789133,7 4,8.21181696 4,9.70129933 L4,22.2987007 C4,23.788183 5.27789133,25 6.84859349,25 L25.1514693,25 C26.7221715,25 28,23.788183 28,22.2987007 L28,9.70129933 C28,8.21181696 26.7221715,7 25.1514693,7 Z M25.1514693,22.6151909 L6.84859349,22.6151909 C6.61771133,22.6151909 6.41521838,22.4673342 6.41521838,22.2987007 L6.41521838,11.3671057 L14.6931228,18.2681177 C14.86283,18.4096483 15.0786382,18.487546 15.3008529,18.487546 L16.6988959,18.487608 C16.9209849,18.487608 17.1369188,18.4096483 17.3066888,18.2681177 L25.58497,11.3668577 L25.58497,22.2988247 C25.58497,22.4673342 25.3822887,22.6151909 25.1514693,22.6151909 Z M16.0000314,16.1196064 L7.94873821,9.38480913 L24.0513246,9.38480913 L16.0000314,16.1196064 Z" id="Fill"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </span>
+                        <a href="mailto:{{ contactCard.email  }}">{{ contactCard.email }}</a></div>
+                        {% endif %}
+
+                    </div>
+                    </div>
+                    <div class="uxb-contact-card__detail-footer">
+                        <button class="uxb-button js-card-close-button" type="button">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

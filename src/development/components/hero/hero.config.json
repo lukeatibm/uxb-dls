@@ -1,0 +1,17 @@
+{
+  "name": "Hero",
+  "status": "wip",
+  "context": {
+    "hero": {
+      "image": "/components/raw/hero/placeholder.svg",
+      "title": "#UXB19",
+      "heading": "Introduction to Design Language Systems Workshop",
+      "date": "21 June 2019",
+      "description": "This page was designed and created as a quick summary and souvenir of our workshop. We’ve included our top-level information, the presentation slides, additional material and helpful content, as well as a list of all the attendees, so we can all get in touch easier.",
+      "cta": {
+        "link": "https://uxbeirut.com/",
+        "text": "Check the UXB website"
+      }
+    }
+  }
+}

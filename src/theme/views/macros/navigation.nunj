@@ -1,0 +1,48 @@
+{% import "macros/status.nunj" as status %}
+
+{% macro tree(root, current, request) %}
+<div>
+   {# <h3 class="bx--side-nav__title">{{ root.label }}</h3> #}
+    <ul class="bx--side-nav__items">
+        {{ leaves(root.filter('isHidden', false).items(), root, current, 2, request) }}
+    </ul>
+</div>
+{% endmacro %}
+
+{% macro leaves(items, root, current, depth, request) %}
+    {% for item in items %}
+
+        {% if item.isCollection or (item.isComponent and not item.isCollated and item.variants().filter('isHidden', false).size > 1) %}
+        {% set expanded = true if current else false %}
+        <li class="bx--side-nav__item">
+
+        <button class="bx--side-nav__submenu" role="button" aria-haspopup="true" aria-expanded="{{ expanded }}">
+          <span class="bx--side-nav__submenu-title">
+            {{ item.label }}
+          </span>
+          <div class="bx--side-nav__icon bx--side-nav__icon--small bx--side-nav__submenu-chevron">
+            <svg aria-hidden="true" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <path d="M16 22L6 12l1.414-1.414L16 19.172l8.586-8.586L26 12 16 22z" />
+            </svg>
+          </div>
+        </button>
+            <ul class="bx--side-nav__menu" role="menu" >
+            {% if item.isComponent and not item.isCollated %}
+            {% set items = item.variants().filter('isHidden', false).items() %}
+            {% else %}
+            {% set items = item.filter('isHidden', false).items() %}
+            {% endif %}
+            {{ leaves(items, root, current, (depth + 1), request) }}
+            </ul>
+        </li>
+        {% else %}
+        {% set isCurrent = true if (current and (current.id == item.id)) else false %}
+        <li  class="bx--side-nav__menu-item" role="none">
+            <a class="bx--side-nav__link {% if isCurrent %} bx--side-nav__link--current{% endif %}" role="menuitem" href="{{ path( (item | url), request) }}" data-pjax>
+                <span class="bx--side-nav__link-text">{{ item.label }}</span>
+                {# {% if item.status %}{{ status.unlabelled(item.status) }}{% endif %} #}
+            </a>
+        </li>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}

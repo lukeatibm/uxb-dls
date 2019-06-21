@@ -1,0 +1,5 @@
+{% if frctl.docs.size %}
+<div>
+{{ nav.tree(frctl.docs, doc, request) }}
+</div>
+{% endif %}

@@ -1,0 +1,8 @@
+<div class="uxb-icon-card-grid">
+{% for card in iconCardGrid.cards %}
+  <div class="uxb-icon-card-grid__item">
+  {% set iconCard = card %}
+  {% include '@icon-card' %}
+  </div>
+{% endfor %}
+</div>

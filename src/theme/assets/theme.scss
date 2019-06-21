@@ -1,0 +1,81 @@
+
+$feature-flags: (
+  components-x: true,
+  ui-shell: true,
+);
+@import 'node_modules/carbon-components/scss/globals/scss/styles';
+
+body {
+  @include reset;
+  @include type-style('body-short-01');
+  color: $text-01;
+  background-color: $ui-background;
+  line-height: 1;
+  padding-top: 48px;
+}
+
+body * {
+  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif!important;
+}
+
+.Prose {
+  max-width: 1024px;
+  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif!important;
+}
+
+code *, pre * {
+  font-family: Hack, Consolas, Monaco, "Andale Mono", monospace!important;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+}
+
+.bx--side-nav {
+  position: relative;
+}
+
+@media (min-width: 42rem) {
+  .bx--tabs {
+      min-height: 40px;
+  }
+}
+
+
+.is-active .bx--tabs__nav-link {
+  font-weight: 600;
+  border-bottom: 3px solid #0062ff;
+}
+
+.design-tokens {
+  display: flex;
+
+  &__heading {
+    font-weight: bold!important;
+    font-size: 24px!important;
+    color: #09174B;
+  }
+}
+.design-token {
+  &__container {
+    margin-right: 0.5rem;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #09174B;
+  }
+  &__value {
+    font-size: 14px;
+    color: #57669D;
+  }
+  &__color {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 0.5rem;
+box-shadow: 0 2px 4px 0 rgba(87,102,157,0.16);
+  }
+}
+
+.documentation-page * {
+  color :#09174B;
+}

@@ -1,0 +1,14 @@
+<div class="uxb-stepper">
+<div class="uxb-stepper__container">
+<div class="uxb-stepper__line"></div>
+{% for step in stepper.steps %}
+  <div class="uxb-stepper__step">
+    <div class="uxb-stepper__circle">{{ loop.index }}</div>
+      <div class="uxb-stepper__content">
+     <div class="uxb-stepper__title">{{ step.title }}</div>
+     <div class="uxb-stepper__description">{{ step.description }}</div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+</div>

@@ -1,0 +1,29 @@
+{
+  "Name": "Bubble Chart",
+  "status": "wip",
+  "context": {
+    "bubbleChart": {
+      "bubbles": {
+        "children": [
+          { "Name": "Component Library", "Count": 300, "Core": true },
+          { "Name": "Documentation", "Count": 183, "Core": false },
+          { "Name": "Design Principles", "Count": 167, "Core": false },
+          { "Name": "Tone of Voice", "Count": 223, "Core": false },
+          { "Name": "Motion Principles", "Count": 214, "Core": false },
+          { "Name": "Color", "Count": 175, "Core": true },
+          { "Name": "Brand Guidelines", "Count": 155, "Core": false },
+          { "Name": "Icon Libraries", "Count": 138, "Core": false },
+          { "Name": "Playbook", "Count": 91, "Core": false },
+          { "Name": "Templates / Layouts", "Count": 124, "Core": true },
+          { "Name": "Content Guidelines", "Count": 117, "Core": false },
+          { "Name": "Image Libraries", "Count": 105, "Core": false },
+          { "Name": "Resources", "Count": 101, "Core": false },
+          { "Name": "Typography", "Count": 122, "Core": true },
+          { "Name": "Examples", "Count": 95, "Core": false },
+          { "Name": "Code Experiments", "Count": 121, "Core": false },
+          { "Name": "Assets", "Count": 85, "Core": false }
+        ]
+      }
+    }
+  }
+}

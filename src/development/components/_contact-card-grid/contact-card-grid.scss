@@ -1,0 +1,35 @@
+.uxb-contact-card-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: $container-width;
+  margin: 0 auto;
+
+  &__item {
+    width: 50%;
+    min-width: 50%;
+    padding: 0.25rem 1rem;
+    box-sizing: border-box;
+
+    &:nth-child(2n-1) {
+      padding-right: 0.25rem;
+    }
+
+    &:nth-child(2n) {
+      padding-left: 0.25rem;
+    }
+
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 33.33333%;
+      min-width: 33.33333%;
+      padding: 0.25rem;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 25%;
+      min-width: 25%;
+    }
+  }
+
+}
