@@ -12,6 +12,6 @@ Download and install the Poppins font from google <a href="https://fonts.google.
 
 ## Step 3 - Install the Sketch library
 
-<a class="bx--btn bx--btn--primary" href="sketch://add-library/cloud/Qx7lm">Install the Library</a>
+<a class="bx--btn bx--btn--primary" href="sketch://add-library/cloud/gbz7q">Install the Library</a>
 
 ## Step 4 - Get designing
